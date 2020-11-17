@@ -1,0 +1,89 @@
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.exe.config
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.exe
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.pdb
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csprojAssemblyReference.cache
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Properties.Resources.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csproj.GenerateResource.cache
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csproj.CoreCompileInputs.cache
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.exe
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.pdb
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.login.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.MainScreen.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\FontAwesome.Sharp.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\SixLabors.Fonts.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\System.Buffers.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\System.Memory.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\System.Numerics.Vectors.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\SixLabors.Fonts.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\System.Buffers.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\System.Memory.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\System.Numerics.Vectors.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csproj.CopyComplete
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Customers.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Products.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Setting.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\Newtonsoft.Json.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\NuGet.Common.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\NuGet.Configuration.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\NuGet.Frameworks.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\NuGet.Packaging.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\NuGet.Versioning.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\Newtonsoft.Json.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\NuGet.Common.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\NuGet.Configuration.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\NuGet.Frameworks.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\NuGet.Packaging.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\UserUI\QuanLyBanHoa\bin\Debug\NuGet.Versioning.xml
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.exe.config
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.exe
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.pdb
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\FontAwesome.Sharp.dll
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\Newtonsoft.Json.dll
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\System.Buffers.dll
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\System.Memory.dll
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\System.Numerics.Vectors.dll
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\Newtonsoft.Json.xml
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\System.Buffers.xml
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\System.Memory.xml
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\System.Numerics.Vectors.xml
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csprojAssemblyReference.cache
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Customers.resources
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Setting.resources
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.MainScreen.resources
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.login.resources
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Products.resources
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Properties.Resources.resources
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csproj.GenerateResource.cache
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csproj.CoreCompileInputs.cache
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csproj.CopyComplete
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.exe
+F:\Cong Nghe Phan Mem\CNPM\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.pdb
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.exe.config
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.exe
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.pdb
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\FontAwesome.Sharp.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\System.Buffers.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\System.Memory.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\System.Numerics.Vectors.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\System.Buffers.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\System.Memory.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\System.Numerics.Vectors.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csprojAssemblyReference.cache
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Customers.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Setting.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.MainScreen.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.login.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Products.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Properties.Resources.resources
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csproj.GenerateResource.cache
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csproj.CoreCompileInputs.cache
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\UserUI.csproj.CopyComplete
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.exe
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.pdb
+F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\UserUI\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.AddProduct.resources
