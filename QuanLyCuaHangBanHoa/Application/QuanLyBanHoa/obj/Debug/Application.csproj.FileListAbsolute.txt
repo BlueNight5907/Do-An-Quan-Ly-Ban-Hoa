@@ -51,3 +51,33 @@ F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\Application\Qua
 F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.ImportGoods.resources
 F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Sell.resources
 F:\Cong Nghe Phan Mem\Project Selling Flower\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.SellProduct.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.exe.config
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.exe
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.pdb
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\FontAwesome.Sharp.dll
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Buffers.dll
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Memory.dll
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Numerics.Vectors.dll
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Buffers.xml
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Memory.xml
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Numerics.Vectors.xml
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\Application.csprojAssemblyReference.cache
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.AddProduct.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Customers.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.ImportGoods.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Sell.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.SellProduct.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Setting.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.MainScreen.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.login.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Products.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Properties.Resources.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\Application.csproj.GenerateResource.cache
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\Application.csproj.CoreCompileInputs.cache
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\Application.csproj.CopyComplete
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.exe
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.pdb
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.UserManagement.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.UserInformation.resources

@@ -28,7 +28,6 @@ namespace QuanLyBanHoa.DAO
                 account = new Account(result.Rows[0]);
             return result.Rows.Count > 0;
         }
-        
         public Account AccountInfor()
         {
             return account;

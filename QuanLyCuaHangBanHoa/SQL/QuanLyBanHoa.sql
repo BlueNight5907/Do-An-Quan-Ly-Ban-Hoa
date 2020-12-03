@@ -299,7 +299,7 @@ go
 create proc CheckAccount(@username char(100),@password char(20))
 as
 begin
-	select TenHienThi, TaiKhoan.TenDangNhap,MatKhau,NhanVien.MaNV, TenNV,permission  from TaiKhoan inner join NhanVien on TaiKhoan.MaNV = NhanVien.MaNV inner join PhanQuyen on PhanQuyen.TenDangNhap = TaiKhoan.TenDangNhap
+	select TenHienThi,NgaySinh,GT,CMND,sdt,diachi,NgayVaoLam, TaiKhoan.TenDangNhap,MatKhau,NhanVien.MaNV, TenNV,permission  from TaiKhoan inner join NhanVien on TaiKhoan.MaNV = NhanVien.MaNV inner join PhanQuyen on PhanQuyen.TenDangNhap = TaiKhoan.TenDangNhap
 	where taikhoan.TenDangNhap = @username and MatKhau = @password;
 end
 go

@@ -201,6 +201,8 @@ namespace QuanLyBanHoa
         {
             HideSubMenu();
             activateButton(sender, hightlightColor);
+            openChildForm(new UserManagement());
+
             
 
         }
@@ -353,6 +355,13 @@ namespace QuanLyBanHoa
         {
             iconbtnUser.ForeColor = hightlightColor;
             iconbtnUser.IconColor = hightlightColor;
+            Form userIfor = new UserInformation();
+            userIfor.ShowDialog();
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
