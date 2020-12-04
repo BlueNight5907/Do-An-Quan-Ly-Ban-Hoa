@@ -81,3 +81,33 @@ F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\Quan
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.pdb
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.UserManagement.resources
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.UserInformation.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.exe.config
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.exe
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\QuanLyBanHoa.pdb
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\FontAwesome.Sharp.dll
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Buffers.dll
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Memory.dll
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Numerics.Vectors.dll
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Buffers.xml
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Memory.xml
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Numerics.Vectors.xml
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\Application.csprojAssemblyReference.cache
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.AddProduct.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Customers.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.ImportGoods.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Sell.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.SellProduct.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Setting.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.UserInformation.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.UserManagement.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.MainScreen.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.login.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Products.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Properties.Resources.resources
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\Application.csproj.GenerateResource.cache
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\Application.csproj.CoreCompileInputs.cache
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\Application.csproj.CopyComplete
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.exe
+C:\University\Semester_5\SoftwareEngineering_Theory\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.pdb
