@@ -30,7 +30,7 @@ namespace QuanLyBanHoa.Forms
             DataTable data = StaffDAO.Instance.LoadAllStaff();
             dgvListStaff.DataSource = data;
         }
-
+        private int IDstaff = 0;
         private void dgvListStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             iconbtnAdd.Enabled = false;
@@ -41,6 +41,7 @@ namespace QuanLyBanHoa.Forms
                 return;
             }
             DataGridViewRow row = dgvListStaff.Rows[index];
+            IDstaff = Convert.ToInt32(row.Cells[0].Value);
             String staffname = Convert.ToString(row.Cells[1].Value);
             DateTime birthday = Convert.ToDateTime(row.Cells[2].Value);
             bool gender = Convert.ToBoolean(row.Cells[3].Value);
@@ -105,7 +106,7 @@ namespace QuanLyBanHoa.Forms
                 cbFemale.Checked = false;
             }
         }
-
+        
         private void iconButton4_Click(object sender, EventArgs e)
         {
             Clear();
@@ -124,6 +125,7 @@ namespace QuanLyBanHoa.Forms
             cbbPosition.SelectedItem = null;
             cbFemale.Checked = false;
             cbMale.Checked = false;
+            IDstaff = 0;
         }
         private bool isNum(string a)
         {
@@ -209,6 +211,59 @@ namespace QuanLyBanHoa.Forms
             {
                 MessageBox.Show("Chưa nhập đầy đủ hoặc thông tin không hợp lệ");
             }
+        }
+
+        private void iconbtnDelete_Click(object sender, EventArgs e)
+        {
+            if (StaffDAO.Instance.DeleteStaff(IDstaff))
+            {
+                MessageBox.Show("Xóa nhân viên thành công");
+                Clear();
+                LoadListStaff();
+            }
+            else
+            {
+                MessageBox.Show("Xóa nhân viên thất bại");
+            }
+        }
+
+        private void iconbtnUpdate_Click(object sender, EventArgs e)
+        {
+            if (CheckValid())
+            {
+                string staffname = txtStaffName.Text;
+                DateTime birthday = dtpBirth.Value;
+                bool gender = cbFemale.Checked;
+                string cmnd = txtCMND.Text;
+                string sdt = txtPhoneNumber.Text;
+                string address = txtAddress.Text;
+                DateTime daystart = dtpDateStart.Value;
+                int salary = Convert.ToInt32(txtSalary.Text);
+                string positon = cbbPosition.SelectedItem.ToString();
+                try
+                {
+                    if (StaffDAO.Instance.UpdateStaff(IDstaff,staffname, birthday, gender, cmnd, sdt, address, daystart, salary, positon))
+                    {
+                        MessageBox.Show("Cập nhật thông tin nhân viên thành công");
+                        Clear();
+                        LoadListStaff();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thông tin nhân viên thất bại");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi: " + ex.ToString());
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Chưa nhập đầy đủ hoặc thông tin không hợp lệ");
+            }
+
         }
     }
 }

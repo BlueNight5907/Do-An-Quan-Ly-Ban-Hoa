@@ -81,3 +81,4 @@ F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\Quan
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.UserManagement.resources
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.UserInformation.resources
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.ChangePassword.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.CreateAccount.resources
