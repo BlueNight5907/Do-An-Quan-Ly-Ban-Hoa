@@ -32,5 +32,46 @@ namespace QuanLyBanHoa.DAO
         {
             return account;
         }
+        public bool CheckAccount(string username, string password)
+        {
+            string query = "exec CheckAccount @username , @password";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password });
+            return result.Rows.Count > 0;
+        }
+        public int ChangePassWord(string username, string password)
+        {
+            string query = "Update TaiKhoan set Matkhau = @password where TenDangNhap = @username";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { password,username });
+            return result;
+        }
+        public DataTable LoadAllUser()
+        {
+            string query = "exec GetAllUser";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
+        public bool DeleteAccount(string username)
+        {
+            string query = "delete from phanquyen where tendangnhap = @a";
+            int rowaffect = DataProvider.Instance.ExecuteNonQuery(query, new object[] { username });
+            query = "delete from taikhoan where tendangnhap = @a";
+            rowaffect = DataProvider.Instance.ExecuteNonQuery(query, new object[] { username });
+            if (rowaffect < 1)
+            {
+                return false;
+            }
+            return true;
+        }
+        public bool UpdateAccount(string username, string pass, string role , string displayname, int ID)
+        {
+            string query = "exec ThemTaiKhoan @a , @b , @c , @d , @e ";
+            int rowaffect = DataProvider.Instance.ExecuteNonQuery(query, new object[] { username, pass, role, displayname, ID });
+            if (rowaffect < 1)
+            {
+                return false;
+            }
+            return true;
+        }
+
     }
 }

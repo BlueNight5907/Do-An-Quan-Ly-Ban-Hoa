@@ -21,6 +21,11 @@ namespace QuanLyBanHoa.Forms
             InitializeComponent();
             ChangeIconColor(main.hightlightColor);
             LoadData();
+            LoadProductToFlowPanel(0, "All", "", 0, 0);
+            if (AccountDAO.Instance.AccountInfor().Permission != "Admin")
+            {
+                dtbTime.Enabled = false;
+            }
 
         }
         private void ChangeIconColor(Color color)
@@ -249,8 +254,6 @@ namespace QuanLyBanHoa.Forms
             TotalValue = TotalValue + money;
             ImportGoodsInfor ItemInfor = new ImportGoodsInfor(ID, Name, Amount, BID, money);
             ListImportGood.Add(ItemInfor);
-            
-            
             txtTotalMoney.Text = TotalValue.ToString();
         }
         private void iconbtnAddProduct_Click(object sender, EventArgs e)
@@ -328,9 +331,9 @@ namespace QuanLyBanHoa.Forms
         {
 
             DataTable data = ProductDAO.Instance.ListProductWithIMG(ID, name, type, price1,price2);
-            Image img = null;
             foreach (DataRow item in data.Rows)
             {
+                Image img = null;
                 int MaHH = (int)item["Mahh"];
                 string TenHH = (string)item["Ten"];
                 if (item["IMG"] != System.DBNull.Value)
@@ -462,14 +465,14 @@ namespace QuanLyBanHoa.Forms
             int n = data.Rows.Count;
             
             dataGridViewHistory.DataSource = data;
-            int TotalValue = 0;
+            int TotalValueMoney = 0;
             for (int i = 1; i <= n; i++)
             {
                 dataGridViewHistory.Rows[i - 1].Cells[0].Value = i.ToString();
-                TotalValue =TotalValue + Int32.Parse(dataGridViewHistory.Rows[i - 1].Cells[6].Value.ToString());
+                TotalValueMoney = TotalValueMoney + Int32.Parse(dataGridViewHistory.Rows[i - 1].Cells[6].Value.ToString());
                 
             }
-            lblMoney.Text = TotalValue.ToString() + "đ";
+            lblMoney.Text = TotalValueMoney.ToString() + "đ";
         }
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
@@ -488,6 +491,121 @@ namespace QuanLyBanHoa.Forms
                 dataGridViewHistory.Rows[i - 1].Cells[0].Value = i.ToString();
 
             }
+        }
+
+        private void tabImportGoods_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelProduct_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbPrice_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblMoney_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

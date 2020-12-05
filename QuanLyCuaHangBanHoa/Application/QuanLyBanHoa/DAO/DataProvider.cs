@@ -85,7 +85,6 @@ namespace QuanLyBanHoa.DAO
                 }
 
                 data = command.ExecuteNonQuery();
-
                 connection.Close();
             }
 

@@ -85,13 +85,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\ImportGoodDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
+    <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\UserManagementDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\ImportGoodsInfor.cs" />
     <Compile Include="DTO\ProductWithIMG.cs" />
+    <Compile Include="DTO\SellItemInfor.cs" />
     <Compile Include="DTO\Supplier.cs" />
     <Compile Include="DTO\TypeProduct.cs" />
     <Compile Include="Forms\AddProduct.cs">
@@ -99,6 +103,18 @@
     </Compile>
     <Compile Include="Forms\AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Customers.cs">
       <SubType>Form</SubType>
@@ -111,12 +127,6 @@
     </Compile>
     <Compile Include="Forms\ImportGoods.Designer.cs">
       <DependentUpon>ImportGoods.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sell.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sell.Designer.cs">
-      <DependentUpon>Sell.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SellProduct.cs">
       <SubType>Form</SubType>
@@ -165,14 +175,17 @@
     <EmbeddedResource Include="Forms\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ImportGoods.resx">
       <DependentUpon>ImportGoods.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sell.resx">
-      <DependentUpon>Sell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SellProduct.resx">
       <DependentUpon>SellProduct.cs</DependentUpon>

@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Products));
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.iconbtnClear = new FontAwesome.Sharp.IconButton();
+            this.txtIDProduct = new System.Windows.Forms.TextBox();
             this.dataGridViewListProduct = new System.Windows.Forms.DataGridView();
             this.MaHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,15 +43,12 @@
             this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.labelSearch = new System.Windows.Forms.Label();
             this.labelListProduct = new System.Windows.Forms.Label();
-            this.txtNameProduct = new System.Windows.Forms.TextBox();
             this.iconBtnSearch = new FontAwesome.Sharp.IconButton();
-            this.txtIDProduct = new System.Windows.Forms.TextBox();
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.iconbtnClear = new FontAwesome.Sharp.IconButton();
+            this.txtNameProduct = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -76,8 +78,8 @@
             this.txtIDType = new System.Windows.Forms.TextBox();
             this.labelTypeProductName = new System.Windows.Forms.Label();
             this.txtTypeProductName = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListProduct)).BeginInit();
             this.panelLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListProduct)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -88,6 +90,62 @@
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
+            // panelLeft
+            // 
+            this.panelLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelLeft.AutoSize = true;
+            this.panelLeft.Controls.Add(this.iconbtnClear);
+            this.panelLeft.Controls.Add(this.txtIDProduct);
+            this.panelLeft.Controls.Add(this.dataGridViewListProduct);
+            this.panelLeft.Controls.Add(this.labelListProduct);
+            this.panelLeft.Controls.Add(this.iconBtnSearch);
+            this.panelLeft.Controls.Add(this.txtNameProduct);
+            this.panelLeft.Controls.Add(this.panel1);
+            this.panelLeft.Controls.Add(this.labelSearch);
+            this.panelLeft.Controls.Add(this.panel2);
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(590, 640);
+            this.panelLeft.TabIndex = 10;
+            this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint_1);
+            // 
+            // iconbtnClear
+            // 
+            this.iconbtnClear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.iconbtnClear.Cursor = System.Windows.Forms.Cursors.Default;
+            this.iconbtnClear.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconbtnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.iconbtnClear.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.iconbtnClear.IconColor = System.Drawing.Color.Black;
+            this.iconbtnClear.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconbtnClear.IconSize = 30;
+            this.iconbtnClear.Location = new System.Drawing.Point(441, 55);
+            this.iconbtnClear.MaximumSize = new System.Drawing.Size(155, 75);
+            this.iconbtnClear.Name = "iconbtnClear";
+            this.iconbtnClear.Rotation = 0D;
+            this.iconbtnClear.Size = new System.Drawing.Size(112, 61);
+            this.iconbtnClear.TabIndex = 19;
+            this.iconbtnClear.Text = "Làm Mới";
+            this.iconbtnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconbtnClear.UseVisualStyleBackColor = true;
+            this.iconbtnClear.Click += new System.EventHandler(this.iconbtnClear_Click_1);
+            // 
+            // txtIDProduct
+            // 
+            this.txtIDProduct.AllowDrop = true;
+            this.txtIDProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDProduct.ForeColor = System.Drawing.Color.LightGray;
+            this.txtIDProduct.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtIDProduct.Location = new System.Drawing.Point(18, 55);
+            this.txtIDProduct.MaximumSize = new System.Drawing.Size(550, 30);
+            this.txtIDProduct.Name = "txtIDProduct";
+            this.txtIDProduct.Size = new System.Drawing.Size(299, 26);
+            this.txtIDProduct.TabIndex = 16;
+            this.txtIDProduct.Text = "Mã sản phẩm";
+            this.txtIDProduct.WordWrap = false;
+            this.txtIDProduct.Enter += new System.EventHandler(this.txtIDProduct_Enter);
+            // 
             // dataGridViewListProduct
             // 
             this.dataGridViewListProduct.AllowDrop = true;
@@ -96,6 +154,15 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewListProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewListProduct.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewListProduct.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewListProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewListProduct.ColumnHeadersHeight = 40;
             this.dataGridViewListProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHH,
@@ -105,8 +172,15 @@
             this.GiaNhap,
             this.GiaBan,
             this.Soluong});
-            this.dataGridViewListProduct.Location = new System.Drawing.Point(3, 164);
-            this.dataGridViewListProduct.MaximumSize = new System.Drawing.Size(800, 1200);
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewListProduct.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewListProduct.Location = new System.Drawing.Point(12, 168);
             this.dataGridViewListProduct.Name = "dataGridViewListProduct";
             this.dataGridViewListProduct.ReadOnly = true;
             this.dataGridViewListProduct.RowHeadersWidth = 51;
@@ -114,23 +188,21 @@
             this.dataGridViewListProduct.RowTemplate.ReadOnly = true;
             this.dataGridViewListProduct.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewListProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewListProduct.Size = new System.Drawing.Size(550, 464);
-            this.dataGridViewListProduct.TabIndex = 15;
+            this.dataGridViewListProduct.Size = new System.Drawing.Size(565, 464);
+            this.dataGridViewListProduct.TabIndex = 24;
             this.dataGridViewListProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListProduct_CellClick);
-            this.dataGridViewListProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListProduct_CellContentClick);
-            this.dataGridViewListProduct.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewListProduct_CellPainting_1);
             // 
             // MaHH
             // 
             this.MaHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.MaHH.DataPropertyName = "MaHH";
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaHH.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaHH.DefaultCellStyle = dataGridViewCellStyle8;
             this.MaHH.HeaderText = "Mã HH";
             this.MaHH.MinimumWidth = 6;
             this.MaHH.Name = "MaHH";
             this.MaHH.ReadOnly = true;
-            this.MaHH.Width = 61;
+            this.MaHH.Width = 69;
             // 
             // TenHH
             // 
@@ -180,66 +252,15 @@
             this.Soluong.Name = "Soluong";
             this.Soluong.ReadOnly = true;
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Location = new System.Drawing.Point(3, 124);
-            this.panel1.MaximumSize = new System.Drawing.Size(800, 10);
-            this.panel1.MinimumSize = new System.Drawing.Size(564, 10);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(572, 10);
-            this.panel1.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Location = new System.Drawing.Point(3, 32);
-            this.panel2.MaximumSize = new System.Drawing.Size(800, 10);
-            this.panel2.MinimumSize = new System.Drawing.Size(565, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(573, 10);
-            this.panel2.TabIndex = 5;
-            // 
-            // labelSearch
-            // 
-            this.labelSearch.AutoSize = true;
-            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSearch.Location = new System.Drawing.Point(8, 5);
-            this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(196, 24);
-            this.labelSearch.TabIndex = 6;
-            this.labelSearch.Text = "TRA CỨU SẢN PHẨM";
-            // 
             // labelListProduct
             // 
             this.labelListProduct.AutoSize = true;
             this.labelListProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelListProduct.Location = new System.Drawing.Point(8, 137);
+            this.labelListProduct.Location = new System.Drawing.Point(17, 141);
             this.labelListProduct.Name = "labelListProduct";
             this.labelListProduct.Size = new System.Drawing.Size(215, 24);
-            this.labelListProduct.TabIndex = 7;
+            this.labelListProduct.TabIndex = 23;
             this.labelListProduct.Text = "DANH MỤC SẢN PHẨM";
-            // 
-            // txtNameProduct
-            // 
-            this.txtNameProduct.AllowDrop = true;
-            this.txtNameProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameProduct.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtNameProduct.Location = new System.Drawing.Point(9, 86);
-            this.txtNameProduct.MaximumSize = new System.Drawing.Size(550, 30);
-            this.txtNameProduct.Name = "txtNameProduct";
-            this.txtNameProduct.Size = new System.Drawing.Size(299, 26);
-            this.txtNameProduct.TabIndex = 1;
-            this.txtNameProduct.Text = "Tên sản phẩm";
-            this.txtNameProduct.TextChanged += new System.EventHandler(this.txtNameProduct_TextChanged);
-            this.txtNameProduct.Enter += new System.EventHandler(this.txtNameProduct_Enter);
-            this.txtNameProduct.Leave += new System.EventHandler(this.txtNameProduct_Leave);
             // 
             // iconBtnSearch
             // 
@@ -251,74 +272,63 @@
             this.iconBtnSearch.IconColor = System.Drawing.Color.Black;
             this.iconBtnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnSearch.IconSize = 30;
-            this.iconBtnSearch.Location = new System.Drawing.Point(314, 51);
+            this.iconBtnSearch.Location = new System.Drawing.Point(323, 55);
             this.iconBtnSearch.MaximumSize = new System.Drawing.Size(155, 75);
             this.iconBtnSearch.Name = "iconBtnSearch";
             this.iconBtnSearch.Rotation = 0D;
             this.iconBtnSearch.Size = new System.Drawing.Size(112, 61);
-            this.iconBtnSearch.TabIndex = 2;
+            this.iconBtnSearch.TabIndex = 18;
             this.iconBtnSearch.Text = "Tìm Kiếm";
             this.iconBtnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnSearch.UseVisualStyleBackColor = true;
             this.iconBtnSearch.Click += new System.EventHandler(this.iconBtnSearch_Click);
             // 
-            // txtIDProduct
+            // txtNameProduct
             // 
-            this.txtIDProduct.AllowDrop = true;
-            this.txtIDProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDProduct.ForeColor = System.Drawing.Color.LightGray;
-            this.txtIDProduct.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtIDProduct.Location = new System.Drawing.Point(9, 51);
-            this.txtIDProduct.MaximumSize = new System.Drawing.Size(550, 30);
-            this.txtIDProduct.Name = "txtIDProduct";
-            this.txtIDProduct.Size = new System.Drawing.Size(299, 26);
-            this.txtIDProduct.TabIndex = 0;
-            this.txtIDProduct.Text = "Mã sản phẩm";
-            this.txtIDProduct.WordWrap = false;
-            this.txtIDProduct.TextChanged += new System.EventHandler(this.txtIDProduct_TextChanged);
-            this.txtIDProduct.Enter += new System.EventHandler(this.txtIDProduct_Enter);
-            this.txtIDProduct.Leave += new System.EventHandler(this.txtIDProduct_Leave);
+            this.txtNameProduct.AllowDrop = true;
+            this.txtNameProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameProduct.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtNameProduct.Location = new System.Drawing.Point(18, 90);
+            this.txtNameProduct.MaximumSize = new System.Drawing.Size(550, 30);
+            this.txtNameProduct.Name = "txtNameProduct";
+            this.txtNameProduct.Size = new System.Drawing.Size(299, 26);
+            this.txtNameProduct.TabIndex = 17;
+            this.txtNameProduct.Text = "Tên sản phẩm";
+            this.txtNameProduct.Enter += new System.EventHandler(this.txtNameProduct_Enter);
             // 
-            // panelLeft
+            // panel1
             // 
-            this.panelLeft.AutoSize = true;
-            this.panelLeft.Controls.Add(this.iconbtnClear);
-            this.panelLeft.Controls.Add(this.txtIDProduct);
-            this.panelLeft.Controls.Add(this.dataGridViewListProduct);
-            this.panelLeft.Controls.Add(this.labelListProduct);
-            this.panelLeft.Controls.Add(this.iconBtnSearch);
-            this.panelLeft.Controls.Add(this.txtNameProduct);
-            this.panelLeft.Controls.Add(this.panel1);
-            this.panelLeft.Controls.Add(this.labelSearch);
-            this.panelLeft.Controls.Add(this.panel2);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.MaximumSize = new System.Drawing.Size(800, 1200);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(556, 640);
-            this.panelLeft.TabIndex = 10;
-            this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint_1);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Location = new System.Drawing.Point(12, 128);
+            this.panel1.MaximumSize = new System.Drawing.Size(800, 10);
+            this.panel1.MinimumSize = new System.Drawing.Size(564, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(566, 10);
+            this.panel1.TabIndex = 20;
             // 
-            // iconbtnClear
+            // labelSearch
             // 
-            this.iconbtnClear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconbtnClear.Cursor = System.Windows.Forms.Cursors.Default;
-            this.iconbtnClear.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconbtnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.iconbtnClear.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.iconbtnClear.IconColor = System.Drawing.Color.Black;
-            this.iconbtnClear.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconbtnClear.IconSize = 30;
-            this.iconbtnClear.Location = new System.Drawing.Point(432, 51);
-            this.iconbtnClear.MaximumSize = new System.Drawing.Size(155, 75);
-            this.iconbtnClear.Name = "iconbtnClear";
-            this.iconbtnClear.Rotation = 0D;
-            this.iconbtnClear.Size = new System.Drawing.Size(112, 61);
-            this.iconbtnClear.TabIndex = 3;
-            this.iconbtnClear.Text = "Làm Mới";
-            this.iconbtnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconbtnClear.UseVisualStyleBackColor = true;
-            this.iconbtnClear.Click += new System.EventHandler(this.iconbtnClear_Click_1);
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearch.Location = new System.Drawing.Point(17, 9);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(196, 24);
+            this.labelSearch.TabIndex = 22;
+            this.labelSearch.Text = "TRA CỨU SẢN PHẨM";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel2.Location = new System.Drawing.Point(12, 36);
+            this.panel2.MaximumSize = new System.Drawing.Size(800, 10);
+            this.panel2.MinimumSize = new System.Drawing.Size(565, 10);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(565, 10);
+            this.panel2.TabIndex = 21;
             // 
             // panel3
             // 
@@ -334,15 +344,17 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(556, 0);
+            this.panel4.Location = new System.Drawing.Point(596, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(554, 640);
+            this.panel4.Size = new System.Drawing.Size(514, 640);
             this.panel4.TabIndex = 12;
             // 
             // panel8
@@ -445,12 +457,12 @@
             this.iconbtnDelete.IconColor = System.Drawing.Color.Black;
             this.iconbtnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconbtnDelete.IconSize = 48;
-            this.iconbtnDelete.Location = new System.Drawing.Point(310, 6);
+            this.iconbtnDelete.Location = new System.Drawing.Point(307, 6);
             this.iconbtnDelete.MaximumSize = new System.Drawing.Size(170, 56);
             this.iconbtnDelete.Name = "iconbtnDelete";
             this.iconbtnDelete.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.iconbtnDelete.Rotation = 0D;
-            this.iconbtnDelete.Size = new System.Drawing.Size(167, 56);
+            this.iconbtnDelete.Size = new System.Drawing.Size(170, 56);
             this.iconbtnDelete.TabIndex = 13;
             this.iconbtnDelete.Text = "Xóa mặt hàng";
             this.iconbtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -499,7 +511,7 @@
             this.panel6.Controls.Add(this.lblName);
             this.panel6.Location = new System.Drawing.Point(22, 231);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(478, 242);
+            this.panel6.Size = new System.Drawing.Size(438, 242);
             this.panel6.TabIndex = 16;
             // 
             // lblBid
@@ -606,7 +618,7 @@
             this.txtName.Location = new System.Drawing.Point(6, 32);
             this.txtName.MaximumSize = new System.Drawing.Size(630, 35);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(459, 27);
+            this.txtName.Size = new System.Drawing.Size(419, 27);
             this.txtName.TabIndex = 7;
             // 
             // lblName
@@ -632,7 +644,7 @@
             this.panel5.Controls.Add(this.txtTypeProductName);
             this.panel5.Location = new System.Drawing.Point(245, 11);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(255, 217);
+            this.panel5.Size = new System.Drawing.Size(215, 217);
             this.panel5.TabIndex = 15;
             // 
             // lblMaHH
@@ -655,7 +667,7 @@
             this.txtID.MaximumSize = new System.Drawing.Size(400, 35);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(221, 27);
+            this.txtID.Size = new System.Drawing.Size(181, 27);
             this.txtID.TabIndex = 4;
             // 
             // lblIDType
@@ -678,7 +690,7 @@
             this.txtIDType.MaximumSize = new System.Drawing.Size(400, 35);
             this.txtIDType.Name = "txtIDType";
             this.txtIDType.ReadOnly = true;
-            this.txtIDType.Size = new System.Drawing.Size(221, 27);
+            this.txtIDType.Size = new System.Drawing.Size(181, 27);
             this.txtIDType.TabIndex = 5;
             // 
             // labelTypeProductName
@@ -700,7 +712,7 @@
             this.txtTypeProductName.Location = new System.Drawing.Point(21, 164);
             this.txtTypeProductName.MaximumSize = new System.Drawing.Size(400, 35);
             this.txtTypeProductName.Name = "txtTypeProductName";
-            this.txtTypeProductName.Size = new System.Drawing.Size(221, 27);
+            this.txtTypeProductName.Size = new System.Drawing.Size(181, 27);
             this.txtTypeProductName.TabIndex = 6;
             // 
             // Products
@@ -714,9 +726,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Products";
             this.Text = "Products";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListProduct)).EndInit();
             this.panelLeft.ResumeLayout(false);
             this.panelLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListProduct)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -736,14 +748,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label labelListProduct;
-        private System.Windows.Forms.Label labelSearch;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridViewListProduct;
-        private System.Windows.Forms.TextBox txtIDProduct;
-        private FontAwesome.Sharp.IconButton iconBtnSearch;
-        private System.Windows.Forms.TextBox txtNameProduct;
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -773,8 +777,10 @@
         private System.Windows.Forms.Panel panel9;
         private FontAwesome.Sharp.IconButton iconbtnAdd;
         private FontAwesome.Sharp.IconButton iconbtnReset;
-        private FontAwesome.Sharp.IconButton iconbtnClear;
         private System.Windows.Forms.Panel panel10;
+        private FontAwesome.Sharp.IconButton iconbtnClear;
+        private System.Windows.Forms.TextBox txtIDProduct;
+        private System.Windows.Forms.DataGridView dataGridViewListProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoai;
@@ -782,5 +788,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Soluong;
+        private System.Windows.Forms.Label labelListProduct;
+        private FontAwesome.Sharp.IconButton iconBtnSearch;
+        private System.Windows.Forms.TextBox txtNameProduct;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelSearch;
+        private System.Windows.Forms.Panel panel2;
     }
 }

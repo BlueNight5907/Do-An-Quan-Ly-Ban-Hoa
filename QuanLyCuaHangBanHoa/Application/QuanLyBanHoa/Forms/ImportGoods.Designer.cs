@@ -133,6 +133,7 @@
             this.tabImportGoods.Size = new System.Drawing.Size(1109, 614);
             this.tabImportGoods.TabIndex = 0;
             this.tabImportGoods.Text = "Nhập hàng";
+            this.tabImportGoods.Click += new System.EventHandler(this.tabImportGoods_Click);
             // 
             // flpListProduct
             // 
@@ -184,6 +185,7 @@
             this.panelProduct.Name = "panelProduct";
             this.panelProduct.Size = new System.Drawing.Size(523, 78);
             this.panelProduct.TabIndex = 7;
+            this.panelProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.panelProduct_Paint_1);
             // 
             // txtID
             // 
@@ -207,6 +209,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 19);
             this.label7.TabIndex = 18;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtBID
             // 
@@ -365,6 +368,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(523, 84);
             this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // iconbtnImport
             // 
@@ -406,6 +410,7 @@
             this.label6.Size = new System.Drawing.Size(137, 24);
             this.label6.TabIndex = 19;
             this.label6.Text = "Nhà cung cấp";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtTotalMoney
             // 
@@ -430,6 +435,7 @@
             this.label5.Size = new System.Drawing.Size(96, 24);
             this.label5.TabIndex = 18;
             this.label5.Text = "Tổng tiền";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel8
             // 
@@ -440,6 +446,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(523, 419);
             this.panel8.TabIndex = 10;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // listVProduct
             // 
@@ -514,6 +521,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(573, 113);
             this.tableLayoutPanel1.TabIndex = 20;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel2
             // 
@@ -525,6 +533,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 50);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // cbPrice
             // 
@@ -536,6 +545,7 @@
             this.cbPrice.Name = "cbPrice";
             this.cbPrice.Size = new System.Drawing.Size(180, 26);
             this.cbPrice.TabIndex = 21;
+            this.cbPrice.SelectedIndexChanged += new System.EventHandler(this.cbPrice_SelectedIndexChanged_1);
             // 
             // label4
             // 
@@ -545,6 +555,7 @@
             this.label4.Size = new System.Drawing.Size(74, 18);
             this.label4.TabIndex = 22;
             this.label4.Text = "Giá thành";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel3
             // 
@@ -556,6 +567,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(186, 50);
             this.panel3.TabIndex = 16;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // cbTypeProduct
             // 
@@ -577,6 +589,7 @@
             this.label1.Size = new System.Drawing.Size(111, 18);
             this.label1.TabIndex = 18;
             this.label1.Text = "Loại sản phẩm";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel4
             // 
@@ -588,6 +601,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(238, 50);
             this.panel4.TabIndex = 17;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // label2
             // 
@@ -597,6 +611,7 @@
             this.label2.Size = new System.Drawing.Size(106, 18);
             this.label2.TabIndex = 16;
             this.label2.Text = "Tên sản phẩm";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtProductName
             // 
@@ -619,6 +634,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(238, 50);
             this.panel5.TabIndex = 18;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // txtProductID
             // 
@@ -639,6 +655,7 @@
             this.label3.Size = new System.Drawing.Size(95, 18);
             this.label3.TabIndex = 19;
             this.label3.Text = "ID sản phẩm";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel6
             // 
@@ -649,6 +666,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(131, 50);
             this.panel6.TabIndex = 19;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // iconbtnFilter
             // 
@@ -684,6 +702,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(131, 50);
             this.panel7.TabIndex = 20;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // iconbtnReset
             // 
@@ -736,6 +755,7 @@
             this.lblMoney.Size = new System.Drawing.Size(32, 22);
             this.lblMoney.TabIndex = 4;
             this.lblMoney.Text = "0đ";
+            this.lblMoney.Click += new System.EventHandler(this.lblMoney_Click);
             // 
             // label8
             // 
@@ -746,6 +766,7 @@
             this.label8.Size = new System.Drawing.Size(186, 22);
             this.label8.TabIndex = 3;
             this.label8.Text = "Tổng tiền nhập hàng:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // labelTime
             // 
@@ -756,6 +777,7 @@
             this.labelTime.Size = new System.Drawing.Size(88, 22);
             this.labelTime.TabIndex = 2;
             this.labelTime.Text = "Thời gian";
+            this.labelTime.Click += new System.EventHandler(this.labelTime_Click);
             // 
             // dtbTime
             // 
@@ -767,10 +789,12 @@
             // 
             // dataGridViewHistory
             // 
+            this.dataGridViewHistory.AllowUserToAddRows = false;
             this.dataGridViewHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewHistory.BackgroundColor = System.Drawing.Color.LightCyan;
             this.dataGridViewHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -784,9 +808,11 @@
             this.dataGridViewHistory.Location = new System.Drawing.Point(8, 64);
             this.dataGridViewHistory.Name = "dataGridViewHistory";
             this.dataGridViewHistory.ReadOnly = true;
+            this.dataGridViewHistory.RowTemplate.Height = 35;
             this.dataGridViewHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewHistory.Size = new System.Drawing.Size(1093, 542);
             this.dataGridViewHistory.TabIndex = 0;
+            this.dataGridViewHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHistory_CellContentClick);
             this.dataGridViewHistory.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewHistory_ColumnHeaderMouseClick);
             // 
             // Column1

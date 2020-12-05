@@ -35,6 +35,13 @@ namespace QuanLyBanHoa
             //this.ControlBox = false;
             //this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            if(AccountDAO.Instance.AccountInfor().Permission.Trim() != "Admin")
+            {
+                iconbtnadmin.Visible = false;
+                iconbtnProducts.Visible = false;
+                panelsubmenuProduct.Height = 70;
+                iconbtnCustomers.Visible = false;
+            }
         }
         private void openChildForm(Form childForm)
         {
@@ -130,13 +137,17 @@ namespace QuanLyBanHoa
 
         private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (MessageBox.Show("Bạn có thật sự muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void iconbtnSelling_Click(object sender, EventArgs e)
         {
             HideSubMenu();
             activateButton(sender, hightlightColor);
-            openChildForm(new Sell());
+            openChildForm(new SellProduct());
             
         }
 
@@ -360,6 +371,11 @@ namespace QuanLyBanHoa
         }
 
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

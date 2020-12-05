@@ -98,10 +98,10 @@ namespace QuanLyBanHoa
         }
         private void login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(MessageBox.Show("Bạn có thật sự muốn thoát chương trình?","Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
+            //if(MessageBox.Show("Bạn có thật sự muốn thoát chương trình?","Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            //{
+            //    e.Cancel = true;
+            //}
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

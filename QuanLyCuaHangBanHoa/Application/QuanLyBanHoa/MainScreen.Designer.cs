@@ -49,12 +49,15 @@
             this.lblHome = new System.Windows.Forms.Label();
             this.iconbtnHome = new FontAwesome.Sharp.IconButton();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelsubmenuProduct.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitlebar.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -100,7 +103,7 @@
             this.iconbtnadmin.Rotation = 0D;
             this.iconbtnadmin.Size = new System.Drawing.Size(245, 70);
             this.iconbtnadmin.TabIndex = 9;
-            this.iconbtnadmin.Text = "Adminstrastion";
+            this.iconbtnadmin.Text = "Quản lý nhân viên";
             this.iconbtnadmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconbtnadmin.UseVisualStyleBackColor = true;
             this.iconbtnadmin.Click += new System.EventHandler(this.iconbtnadmin_Click);
@@ -356,10 +359,10 @@
             this.iconbtnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconbtnUser.IconSize = 43;
             this.iconbtnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconbtnUser.Location = new System.Drawing.Point(788, 11);
+            this.iconbtnUser.Location = new System.Drawing.Point(684, 11);
             this.iconbtnUser.Name = "iconbtnUser";
             this.iconbtnUser.Rotation = 0D;
-            this.iconbtnUser.Size = new System.Drawing.Size(170, 43);
+            this.iconbtnUser.Size = new System.Drawing.Size(255, 43);
             this.iconbtnUser.TabIndex = 4;
             this.iconbtnUser.Text = "User";
             this.iconbtnUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -428,12 +431,25 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(66)))), ((int)(((byte)(128)))));
+            this.panelDesktop.Controls.Add(this.pictureBox2);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(245, 60);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1117, 667);
             this.panelDesktop.TabIndex = 2;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1117, 667);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panelShadow
             // 
@@ -469,6 +485,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitlebar.ResumeLayout(false);
             this.panelTitlebar.PerformLayout();
+            this.panelDesktop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -496,6 +514,7 @@
         private System.Windows.Forms.Panel panelline1;
         private System.Windows.Forms.Panel panelline2;
         private FontAwesome.Sharp.IconButton iconbtnUser;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

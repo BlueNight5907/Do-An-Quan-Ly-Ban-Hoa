@@ -12,24 +12,26 @@ create table NhanVien(
 	MaNV int IDENTITY(1,1) primary key,
 	TenNV nvarchar(100) not null,
 	NgaySinh Date not null,
-	GT bit not null,
+	GT bit default(0) not null,
 	CMND char(20) not null,
 	sdt char(11) not null,
 	diachi nvarchar(100) not null,
 	NgayVaoLam date Default getdate(),
-	Luong int default(2800000)
+	Luong int default(2800000),
+	ChucVu nvarchar(100) default(N'Nhân viên'),
+	activated bit default(1)
 );
 go
 create table TaiKhoan(
-	TenDangNhap char(100) COLLATE SQL_Latin1_General_CP1_CS_AS primary key,
+	TenDangNhap char(20) COLLATE SQL_Latin1_General_CP1_CS_AS primary key,
 	MatKhau char(20) COLLATE SQL_Latin1_General_CP1_CS_AS NOT NULL,
 	TenHienThi nvarchar(100)  not null,
 	MaNV int not null,
 );
 go
 create table PhanQuyen(
-	TenDangNhap char(100) COLLATE SQL_Latin1_General_CP1_CS_AS  NOT NULL primary key references TaiKhoan(TenDangNhap),
-	permission char(20),
+	TenDangNhap char(20) COLLATE SQL_Latin1_General_CP1_CS_AS  NOT NULL primary key references TaiKhoan(TenDangNhap),
+	permission nvarchar(20) not null,
 );
 go
 create table LoaiHangHoa(
@@ -53,6 +55,7 @@ create table HangHoa(
 	GiaNhap int default(0) check(gianhap >0),
 	GiaBan int default(1000) check(giaban>0),
 	foreign key(MaNCC) references NhaCungCap(MaNCC),
+	activated bit default(1)
 );
 go
 create table HangHoaIMG(
@@ -105,11 +108,10 @@ create table HoaDon(
 	MaKH int not null,
 	MaNV int not null,
 	DateCheckIn Date default getdate(),
-	DateCheckOut Date,
 	TongTien int not null check(tongtien>0),
-	TienGiam int not null check(tiengiam>0),
+	TienGiam int not null check(tiengiam>=0),
 	ThanhToan int not null check(thanhtoan>0),
-	TrangThai bit not null,
+	TrangThai bit default(1) not null,
 	foreign key(makh) references KhachHang(MaKH),
 	foreign key(manv) references NhanVien(manv),
 );
@@ -130,14 +132,31 @@ create table Discount(
 go
 ----------------------------Them tai khoan
 create PROC ThemTaiKhoan 
-(@user char(100), @pass char(20), @permision char(20), @hienthi nvarchar(100),@ID int)
+(@user char(20), @pass char(20), @permision nvarchar(20), @hienthi nvarchar(100),@ID int)
 AS
 BEGIN
-	insert into TaiKhoan(TenDangNhap,MatKhau,TenHienThi,MaNV) 
-	values(@user,@pass,@hienthi,@ID);
-	insert into PhanQuyen(TenDangNhap,permission) values(@user,@permision);
+	if not exists(select * from TaiKhoan where TenDangNhap = @user)
+	begin
+		insert into TaiKhoan(TenDangNhap,MatKhau,TenHienThi,MaNV) 
+		values(@user,@pass,@hienthi,@ID);
+		insert into PhanQuyen(TenDangNhap,permission) values(@user,@permision);
+	end
+	else
+	begin
+		update TaiKhoan set MatKhau = @pass , TenHienThi = @hienthi where TenDangNhap = @user;
+		update PhanQuyen set permission = @permision where TenDangNhap = @user;
+	end
 END;
 go
+------------------------------Lấy toạn bộ thông tin các tài khoản
+create Proc GetAllUser
+as
+BEGIN
+	select NhanVien.MaNV,TenNV,TenHienThi,TaiKhoan.TenDangNhap, MatKhau,permission from NhanVien left join TaiKhoan on NhanVien.MaNV = TaiKhoan.MaNV left join PhanQuyen on TaiKhoan.TenDangNhap = PhanQuyen.TenDangNhap;
+END;
+go
+
+
 -------------------------------QuanLyTaiKhoan
 create PROC	QuanLyTaiKhoan
 as
@@ -147,38 +166,39 @@ go
 create PROC	DanhMucSanPham
 as
 	select HangHoa.MaHH,Ten,LoaiHangHoa.MaLoai,TenLoai,GiaNhap,GiaBan,SoLuong from HangHoa inner join LoaiHangHoa on HangHoa.MaLoai = LoaiHangHoa.MaLoai 
-	inner join QuanLyHangHoa on QuanLyHangHoa.MaHH = HangHoa.MaHH
+	inner join QuanLyHangHoa on QuanLyHangHoa.MaHH = HangHoa.MaHH where HangHoa.activated = 1;
 go
+
 -------------------------------Danh muc san pham kem img
 create PROC	DanhMucSanPhamKemAnh
 (@ID int,@name nvarchar(100),@MaLoai char(20),@Gia1 int,@Gia2 int)
 as
 	if @name ='All'
 	Begin
-		select HangHoa.MaHH,Ten,IMG from HangHoa left Join HangHoaIMG on HangHoa.MaHH = HangHoaIMG.MaHH;
+		select HangHoa.MaHH,Ten,IMG,GiaNhap,GiaBan from HangHoa left Join HangHoaIMG on HangHoa.MaHH = HangHoaIMG.MaHH where HangHoa.activated = 1;
 	end
 	else
 	Begin
-		select HangHoa.MaHH,Ten,IMG from HangHoa left Join HangHoaIMG on HangHoa.MaHH = HangHoaIMG.MaHH where HangHoa.MaLoai = @MaLoai or HangHoa.Ten = @name or HangHoa.MaHH = @ID; 
+		select HangHoa.MaHH,Ten,IMG,GiaNhap,GiaBan from HangHoa left Join HangHoaIMG on HangHoa.MaHH = HangHoaIMG.MaHH where HangHoa.activated = 1 and(HangHoa.MaLoai = @MaLoai or HangHoa.Ten like concat('%',@name,'%') or HangHoa.MaHH = @ID); 
 	end
-
 go
 
+-- Drop proc DanhMucSanPhamKemAnh
 
 ------------------------------Tim san pham
 create PROC	TimSanPham(@ID int, @Ten nvarchar(100))
 as
 	select HangHoa.MaHH,Ten,LoaiHangHoa.MaLoai,TenLoai,GiaNhap,GiaBan,SoLuong from HangHoa inner join LoaiHangHoa on HangHoa.MaLoai = LoaiHangHoa.MaLoai 
-	inner join QuanLyHangHoa on QuanLyHangHoa.MaHH = HangHoa.MaHH where HangHoa.MaHH = @ID or HangHoa.Ten = @Ten
+	inner join QuanLyHangHoa on QuanLyHangHoa.MaHH = HangHoa.MaHH where HangHoa.activated = 1 and (HangHoa.MaHH = @ID or HangHoa.Ten like ConCat('%',@Ten,'%'))
 go
---drop proc DanhMucSanPham
+--drop proc TimSanPham
 -------------------------------XoaTaiKhoan
 create PROC XoaTaiKhoan 
 (@user char(100))
 AS
 BEGIN
 	if not exists(select * from TaiKhoan inner join PhanQuyen on TaiKhoan.TenDangNhap = PhanQuyen.TenDangNhap
-	where TaiKhoan.TenDangNhap = @user and permission = 'admin')
+	where TaiKhoan.TenDangNhap = @user and permission = N'Admin')
 		delete from TaiKhoan where TenDangNhap = @user;
 END;
 go
@@ -188,7 +208,7 @@ create PROC XoaSanPham
 AS
 BEGIN
 	delete from HangHoaIMG where MaHH = @ID;
-	delete from HangHoa where MaHH = @ID;
+	update HangHoa set activated = 0 where MaHH = @ID;
 END;
 go
 
@@ -250,7 +270,7 @@ begin
 	update QuanLyHangHoa
 	set SoLuong = SoLuong - (select SoLuong from inserted)
 	from QuanLyHangHoa
-	where mahh = QuanLyHangHoa.mahh;
+	where (select MaHH from inserted) = QuanLyHangHoa.mahh;
 	declare @soluong int;
 	set @soluong = (select soluong from Quanlyhanghoa where (select MaHH from inserted) = quanlyhanghoa.mahh);
 	if @soluong < 0
@@ -265,13 +285,14 @@ begin
 	update HangHoa
 	set GiaNhap = (select GiaNhap from inserted)
 	from HangHoa
-	where mahh = HangHoa.mahh;
+	where (select MaHH from inserted) = HangHoa.mahh;
 	update QuanLyHangHoa
 	set SoLuong = SoLuong + (select SoLuong from inserted)
 	from QuanLyHangHoa
-	where mahh = QuanLyHangHoa.mahh;
+	where QuanLyHangHoa.mahh = (select MaHH from inserted);
 end
 go
+
 ---------------------------------------------------------------
 Create trigger CapNhatKhachHangThanThiet on HoaDon after insert as
 begin
@@ -368,6 +389,43 @@ BEGIN
 	
 END;
 go
+---------------------------Nhập hóa đơn
+create PROC NhapHoaDon
+(@makh int, @manv int, @tongtien int ,@tiengiam int,@pay int)
+AS
+BEGIN
+	insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan) 
+	values(@makh, @manv , @tongtien ,@tiengiam ,@pay);
+	SELECT TOP 1 MaHD from HoaDon ORDER BY MaHD DESC;
+	
+END;
+go
+-----------------------------Nhập hóa đơn chi tiết
+create PROC NhapHoaDon_ChiTiet
+(@mahd int,  @mahh int, @soluong int, @thanhtien int)
+AS
+BEGIN
+	insert into ChiTietHoaDon
+	values(@mahd,  @mahh, @soluong, @thanhtien);
+END;
+go
+
+---------------------------Nhập thông tin khách hàng
+
+create PROC NhapKhachHang
+(@name nvarchar(100),  @sdt char(11))
+AS
+BEGIN
+	if not exists(select MaKH from KhachHang where sdt = @sdt and TenKH = @name)
+		begin
+			insert into KhachHang
+			values(@name, @sdt);
+			SELECT TOP 1 MaKH from KhachHang ORDER BY MaKH DESC;
+		end
+	else
+		select MaKH from KhachHang where sdt = @sdt and TenKH = @name
+END;
+go
 ----------------
 ----------------------------Nhap Hang chi tiet
 create PROC NhapHangVaoKho_ChiTiet
@@ -389,36 +447,63 @@ BEGIN
 END;
 go
 ----------------
+create proc KhachHangTiemNang
+(@month int, @year int)
+as
+Begin
+	select top 10 KhachHang.MaKH,TenKH,Sdt, sum(ThanhToan) as tieuthu,count(KhachHang.MaKH) as solanden from
+	KhachHang inner join HoaDon on KhachHang.MaKH = HoaDon.MaKH where month(HoaDon.DateCheckIn)=@month and year(HoaDon.DateCheckIn) = @year group by KhachHang.MaKH,TenKH,sdt
+	order by tieuthu desc;
+end
+go
 
-insert into NhanVien values(N'Nguyễn Văn Huy','11/18/2000',0,'261583149','0376466945','632 Lê Văn Lương, Tân Phong, Quận 7, TP.HCM',GETDATE(),4000000);
+-- ---------------------------------------Đổ dữ liệu
+insert into NhanVien values(N'Nguyễn Văn Huy','11/18/2000',0,'261583149','0376466945',N'632 Lê Văn Lương, Tân Phong, Quận 7, TP.HCM',GETDATE(),4000000,N'Quản Lý',1);
 go
-exec ThemTaiKhoan 'Username', 'Password', 'admin', 'Huy dep zai',1;
+
+insert into NhanVien values(N'Phan Khánh Vinh','03/6/2000',0,'123456789','0888292450',N'Trường đại học Tôn Đức Thắng, Tân Phong, Quận 7, TP.HCM',GETDATE(),3000000,N'Nhân viên',1);
 go
-insert into NhaCungCap(TenNCC,diachi,sdt) values(N'Huy đẹp zai nhất xóm','632, lê văn lương,tân phong quận 7','0376466945');
+
+insert into NhanVien values(N'Tăng cẩm phú','5/7/2000',0,'987654321','0225104392',N'Phước Kiểng, Quận 7, TP.HCM',GETDATE(),3000000,N'Nhân viên',1);
 go
-insert into NhaCungCap(TenNCC,diachi,sdt) values(N'Huy nhà giầu','632, lê văn lương,tân phong quận 7','0123456789');
+insert into NhanVien values(N'Cao Thị Hà','2/29/2000',1,'973534631','0822365142',N'60/13 Ung Văn Khiêm, Quận Bình Thạnh, TP.HCM',GETDATE(),3000000,N'Nhân viên',1);
+go
+
+exec ThemTaiKhoan 'HuyAdmin', 'admin', N'Admin', N'Huy(Admin)',1;
+exec ThemTaiKhoan 'Usertest1', 'nopassword', N'Nhân viên', N'Vinh(Nhân viên)',2;
+go
+insert into NhaCungCap(TenNCC,diachi,sdt) values(N'Long thương lái','632, lê văn lương,tân phong quận 7','0376466945');
+go
+insert into NhaCungCap(TenNCC,diachi,sdt) values(N'Vườn ươm Nụ Hồng','632, lê văn lương,tân phong quận 7','0123456789');
 go
 insert into LoaiHangHoa(MaLoai,TenLoai) values
-('H01','Hoa');
+('H01',N'Hoa tươi');
 go
 insert into LoaiHangHoa(MaLoai,TenLoai) values
-('P01',N'Phân bón');
+('H02',N'Hoa lụa');
 go
 insert into LoaiHangHoa(MaLoai,TenLoai) values
-('G01',N'Giấy gói');
+('H03',N'Hoa giấy');
+go
+insert into LoaiHangHoa(MaLoai,TenLoai) values
+('X01',N'Xương rồng');
+go
+insert into LoaiHangHoa(MaLoai,TenLoai) values
+('P01',N'Chậu cảnh');
+go
+insert into LoaiHangHoa(MaLoai,TenLoai) values
+('G01',N'Vật dụng trang trí');
 go
 insert into NhaCungCap(TenNCC,sdt,diachi) values
 ('Huy','12345','tp HCM');
 go
-insert into KhachHang(TenKH,sdt) values
-('Huy','12345');
-go
 insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
 (1,N'Hoa Lan','H01',5000,10000);
 go
 
 insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
 (1,N'Hoa Lan','H01',5000,10000);
+go
 insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
 (1,N'Hoa Huệ','H01',5000,10000);
 go
@@ -431,27 +516,72 @@ go
 insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
 (1,N'Hoa Vạn Thọ','H01',5000,10000);
 go
+insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
+(1,N'Tình yêu vĩnh cửu','H01',500000,10000);
+go
+insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
+(1,N'Lẳng Hoa Cẩm tú cầu','H02',5000,10000);
+go
+insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
+(1,N'Giấy bóng','G01',7000,9000);
+go
+insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
+(1,N'Nơ','G01',5000,60000);
+go
+insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
+(1,N'Xương rồng tai thỏ','X01',150000,200000);
+go
+insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
+(1,N'Xương rồng tai thỏ','X01',100000,130000);
+go
+insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
+(1,N'Xương rồng bát tiên','X01',200000,240000);
+go
+insert into HangHoa(MaNCC,Ten,MaLoai,GiaNhap,GiaBan) values
+(1,N'Xương rồng thanh sơn','X01',150000,180000);
+go
 
-insert into NhanVien(TenNV,NgaySinh,GT,CMND,sdt,diachi)
-values(N'Nguyen Van Huy','11/18/2000',1,'111','2222','Binh thuan');
+-- ---------------------------------- Thêm dữ liệu vào bảng nhân viên
+insert into QuanLyHangHoa(MaHH,SoLuong)
+values(1,10000);
 go
 insert into QuanLyHangHoa(MaHH,SoLuong)
-values(1,10);
+values(2,10000);
 go
 insert into QuanLyHangHoa(MaHH,SoLuong)
-values(2,10);
+values(3,10000);
 go
 insert into QuanLyHangHoa(MaHH,SoLuong)
-values(3,10);
+values(4,10000);
 go
 insert into QuanLyHangHoa(MaHH,SoLuong)
-values(4,10);
+values(5,10000);
 go
 insert into QuanLyHangHoa(MaHH,SoLuong)
-values(5,10);
+values(6,10000);
 go
 insert into QuanLyHangHoa(MaHH,SoLuong)
-values(6,10);
+values(7,10000);
+go
+insert into QuanLyHangHoa(MaHH,SoLuong)
+values(8,10000);
+insert into QuanLyHangHoa(MaHH,SoLuong)
+values(9,10000);
+go
+insert into QuanLyHangHoa(MaHH,SoLuong)
+values(10,10000);
+go
+insert into QuanLyHangHoa(MaHH,SoLuong)
+values(11,10000);
+go
+insert into QuanLyHangHoa(MaHH,SoLuong)
+values(12,10000);
+go
+insert into QuanLyHangHoa(MaHH,SoLuong)
+values(13,10000);
+go
+insert into QuanLyHangHoa(MaHH,SoLuong)
+values(14,10000);
 go
 insert into Discount(Discount) values(5);
 go
@@ -459,14 +589,65 @@ insert into Discount(Discount) values(10);
 go
 insert into Discount(Discount) values(15);
 go
-insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai)
-values(1,1,10000000,10000,90000,1);
+insert into KhachHang(TenKH,sdt) values
+(N'Nguyễn Văn Hùng','0375466945');
 go
-insert into ChiTietHoaDon(MaHD,MaHH,SoLuong,ThanhTien)
-values(1,1,3,1000000);
+insert into KhachHang(TenKH,sdt) values
+(N'Nguyễn Thị Lụa','0376556945');
 go
-exec DanhMucSanPhamKemAnh 0,'All','a',1,1 
-select * from NhapHang
-select * from ChiTietNhapHang
-select * from NhapHang where DateCheckIn = '11/16/2020'
-exec LichSuNhapHang '11/16/2020'
+insert into KhachHang(TenKH,sdt) values
+(N'Nguyễn Văn Chương','0377233045');
+go
+insert into KhachHang(TenKH,sdt) values
+(N'Hồng Thất Công','0373412333');
+go
+insert into KhachHang(TenKH,sdt) values
+(N'Tạ Văn Nam','0225114321');
+go
+insert into KhachHang(TenKH,sdt) values
+(N'Trần Văn Hùng','0377466945');
+go
+insert into KhachHang(TenKH,sdt) values
+(N'Hà Thị Lụa','0376557945');
+go
+insert into KhachHang(TenKH,sdt) values
+(N'Phùng Văn Chương','0371233045');
+go
+insert into KhachHang(TenKH,sdt) values
+(N'Hoàng Thất Công','0353412333');
+go
+insert into KhachHang(TenKH,sdt) values
+(N'Lê Văn Nam','0224114321');
+go
+insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai,DateCheckIn)
+values(1,1,1000000,100000,900000,1,'12/5/2020');
+go
+insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai,DateCheckIn)
+values(2,1,400000,0,400000,1,'12/5/2020');
+go
+insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai,DateCheckIn)
+values(3,1,900000,0,900000,1,'12/5/2020');
+go
+insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai,DateCheckIn)
+values(4,1,900000,90000,810000,1,'12/5/2020');
+go
+insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai,DateCheckIn)
+values(5,1,900000,0,900000,1,'12/5/2020');
+go
+insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai,DateCheckIn)
+values(6,1,1000000,0,1000000,1,'12/5/2020');
+go
+insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai,DateCheckIn)
+values(7,1,170000,20000,150000,1,'12/5/2020');
+go
+insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai,DateCheckIn)
+values(8,1,150000,0,150000,1,'12/5/2020');
+go
+insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai,DateCheckIn)
+values(9,1,2000000,0,2000000,1,'12/5/2020');
+go
+insert into HoaDon(MaKH,MaNV,TongTien,TienGiam,ThanhToan,TrangThai,DateCheckIn)
+values(10,1,100000,0,100000,1,'12/5/2020');
+go
+
+
