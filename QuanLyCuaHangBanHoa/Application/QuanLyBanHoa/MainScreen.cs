@@ -35,6 +35,13 @@ namespace QuanLyBanHoa
             //this.ControlBox = false;
             //this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            if(AccountDAO.Instance.AccountInfor().Permission.Trim() != "Admin")
+            {
+                iconbtnadmin.Visible = false;
+                iconbtnProducts.Visible = false;
+                panelsubmenuProduct.Height = 70;
+                iconbtnCustomers.Visible = false;
+            }
         }
         private void openChildForm(Form childForm)
         {

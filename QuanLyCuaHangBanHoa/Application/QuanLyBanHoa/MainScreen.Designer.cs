@@ -359,10 +359,10 @@
             this.iconbtnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconbtnUser.IconSize = 43;
             this.iconbtnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconbtnUser.Location = new System.Drawing.Point(788, 11);
+            this.iconbtnUser.Location = new System.Drawing.Point(684, 11);
             this.iconbtnUser.Name = "iconbtnUser";
             this.iconbtnUser.Rotation = 0D;
-            this.iconbtnUser.Size = new System.Drawing.Size(170, 43);
+            this.iconbtnUser.Size = new System.Drawing.Size(255, 43);
             this.iconbtnUser.TabIndex = 4;
             this.iconbtnUser.Text = "User";
             this.iconbtnUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

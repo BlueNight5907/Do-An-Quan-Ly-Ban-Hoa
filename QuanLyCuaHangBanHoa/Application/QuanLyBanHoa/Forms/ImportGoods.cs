@@ -22,6 +22,10 @@ namespace QuanLyBanHoa.Forms
             ChangeIconColor(main.hightlightColor);
             LoadData();
             LoadProductToFlowPanel(0, "All", "", 0, 0);
+            if (AccountDAO.Instance.AccountInfor().Permission != "Admin")
+            {
+                dtbTime.Enabled = false;
+            }
 
         }
         private void ChangeIconColor(Color color)

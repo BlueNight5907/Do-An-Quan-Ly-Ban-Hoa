@@ -50,11 +50,6 @@ namespace QuanLyBanHoa
             LoadData();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Products_Load(object sender, EventArgs e)
         {
             
@@ -151,11 +146,6 @@ namespace QuanLyBanHoa
         }
 
         private void txtNameProduct_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconbtnClear_Click(object sender, EventArgs e)
         {
 
         }

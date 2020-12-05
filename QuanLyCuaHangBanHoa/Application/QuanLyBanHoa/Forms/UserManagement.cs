@@ -69,7 +69,7 @@ namespace QuanLyBanHoa.Forms
             txtSalary.Text = salary.ToString() ;
             foreach(String pos in cbbPosition.Items)
             {
-                if(pos == position)
+                if (pos == position)
                 {
                     cbbPosition.SelectedItem = pos;
                 }
@@ -96,7 +96,6 @@ namespace QuanLyBanHoa.Forms
             }
             iconbtnDelete.Enabled = enable;
             iconbtnUpdate.Enabled = enable;
-            iconbtnCreateAccount.Enabled = enable;
         }
 
         private void cbMale_CheckedChanged(object sender, EventArgs e)
@@ -263,6 +262,22 @@ namespace QuanLyBanHoa.Forms
             {
                 MessageBox.Show("Chưa nhập đầy đủ hoặc thông tin không hợp lệ");
             }
+
+        }
+
+        private void iconbtnCreateAccount_Click(object sender, EventArgs e)
+        {
+            Form createaccount = new CreateAccount();
+            createaccount.ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvListStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

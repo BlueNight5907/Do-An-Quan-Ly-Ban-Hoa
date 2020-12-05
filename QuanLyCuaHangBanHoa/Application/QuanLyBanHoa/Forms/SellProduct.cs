@@ -34,6 +34,11 @@ namespace QuanLyBanHoa.Forms
                 dgvListProduct.Columns[5].Width = 70;
             }
             LoadTypeProduct();
+            if(AccountDAO.Instance.AccountInfor().Permission != "Admin")
+            {
+                dtbTime.Enabled = false;
+                dtp_DetailHis.Enabled = false;
+            }
         }
 
         private void cbTypeProduct_SelectedIndexChanged(object sender, EventArgs e)

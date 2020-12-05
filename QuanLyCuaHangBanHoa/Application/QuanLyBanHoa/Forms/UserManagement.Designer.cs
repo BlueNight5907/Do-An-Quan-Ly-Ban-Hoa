@@ -28,16 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.dgvListStaff = new System.Windows.Forms.DataGridView();
-            this.iconbtnAdd = new FontAwesome.Sharp.IconButton();
-            this.iconbtnUpdate = new FontAwesome.Sharp.IconButton();
-            this.iconbtnDelete = new FontAwesome.Sharp.IconButton();
-            this.iconbtnCreateAccount = new FontAwesome.Sharp.IconButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.iconbtnCreateAccount = new FontAwesome.Sharp.IconButton();
+            this.iconbtnDelete = new FontAwesome.Sharp.IconButton();
+            this.iconbtnUpdate = new FontAwesome.Sharp.IconButton();
+            this.iconbtnAdd = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtStaffName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,19 +69,9 @@
             this.cbbPosition = new System.Windows.Forms.ComboBox();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListStaff)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,18 +85,6 @@
             this.panel1.Size = new System.Drawing.Size(1117, 339);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.iconbtnCreateAccount);
-            this.panel2.Controls.Add(this.iconbtnDelete);
-            this.panel2.Controls.Add(this.iconbtnUpdate);
-            this.panel2.Controls.Add(this.iconbtnAdd);
-            this.panel2.Location = new System.Drawing.Point(825, -2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(294, 328);
-            this.panel2.TabIndex = 1;
-            // 
             // dgvListStaff
             // 
             this.dgvListStaff.AllowUserToAddRows = false;
@@ -106,14 +94,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListStaff.BackgroundColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListStaff.ColumnHeadersHeight = 35;
             this.dgvListStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -128,42 +116,170 @@
             this.Column10});
             this.dgvListStaff.Location = new System.Drawing.Point(0, 0);
             this.dgvListStaff.Name = "dgvListStaff";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListStaff.RowTemplate.Height = 30;
             this.dgvListStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListStaff.Size = new System.Drawing.Size(1117, 339);
             this.dgvListStaff.TabIndex = 0;
             this.dgvListStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListStaff_CellClick);
+            this.dgvListStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListStaff_CellContentClick);
             // 
-            // iconbtnAdd
+            // Column1
             // 
-            this.iconbtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconbtnAdd.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconbtnAdd.FlatAppearance.BorderSize = 0;
-            this.iconbtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconbtnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconbtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconbtnAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.iconbtnAdd.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.iconbtnAdd.IconColor = System.Drawing.Color.Aquamarine;
-            this.iconbtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconbtnAdd.IconSize = 40;
-            this.iconbtnAdd.Location = new System.Drawing.Point(36, 22);
-            this.iconbtnAdd.Name = "iconbtnAdd";
-            this.iconbtnAdd.Rotation = 0D;
-            this.iconbtnAdd.Size = new System.Drawing.Size(237, 50);
-            this.iconbtnAdd.TabIndex = 0;
-            this.iconbtnAdd.Text = "Thêm nhân viên";
-            this.iconbtnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconbtnAdd.UseVisualStyleBackColor = false;
-            this.iconbtnAdd.Click += new System.EventHandler(this.iconbtnAdd_Click);
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "MaNV";
+            this.Column1.FillWeight = 50F;
+            this.Column1.HeaderText = "Mã NV";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenNV";
+            this.Column2.HeaderText = "Tên nhân viên";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NgaySinh";
+            this.Column3.FillWeight = 70F;
+            this.Column3.HeaderText = "Ngày sinh";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "GT";
+            this.Column4.FillWeight = 50F;
+            this.Column4.HeaderText = "Giới tính";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "CMND";
+            this.Column5.FillWeight = 80F;
+            this.Column5.HeaderText = "CMND";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "sdt";
+            this.Column6.FillWeight = 80F;
+            this.Column6.HeaderText = "Số điện thoại";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "diachi";
+            this.Column7.FillWeight = 170F;
+            this.Column7.HeaderText = "Địa chỉ";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "NgayVaoLam";
+            this.Column8.FillWeight = 80F;
+            this.Column8.HeaderText = "Ngày vào làm";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Luong";
+            this.Column9.FillWeight = 80F;
+            this.Column9.HeaderText = "Lương";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "ChucVu";
+            this.Column10.HeaderText = "Chức vụ";
+            this.Column10.Name = "Column10";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.iconbtnCreateAccount);
+            this.panel2.Controls.Add(this.iconbtnDelete);
+            this.panel2.Controls.Add(this.iconbtnUpdate);
+            this.panel2.Controls.Add(this.iconbtnAdd);
+            this.panel2.Location = new System.Drawing.Point(825, -2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(294, 328);
+            this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(5, 328);
+            this.panel3.TabIndex = 4;
+            // 
+            // iconbtnCreateAccount
+            // 
+            this.iconbtnCreateAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconbtnCreateAccount.BackColor = System.Drawing.Color.DodgerBlue;
+            this.iconbtnCreateAccount.FlatAppearance.BorderSize = 0;
+            this.iconbtnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconbtnCreateAccount.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconbtnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconbtnCreateAccount.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.iconbtnCreateAccount.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.iconbtnCreateAccount.IconColor = System.Drawing.Color.Aquamarine;
+            this.iconbtnCreateAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconbtnCreateAccount.IconSize = 40;
+            this.iconbtnCreateAccount.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconbtnCreateAccount.Location = new System.Drawing.Point(36, 233);
+            this.iconbtnCreateAccount.Name = "iconbtnCreateAccount";
+            this.iconbtnCreateAccount.Rotation = 0D;
+            this.iconbtnCreateAccount.Size = new System.Drawing.Size(237, 50);
+            this.iconbtnCreateAccount.TabIndex = 3;
+            this.iconbtnCreateAccount.Text = "Cấp tài khoản";
+            this.iconbtnCreateAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconbtnCreateAccount.UseVisualStyleBackColor = false;
+            this.iconbtnCreateAccount.Click += new System.EventHandler(this.iconbtnCreateAccount_Click);
+            // 
+            // iconbtnDelete
+            // 
+            this.iconbtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconbtnDelete.BackColor = System.Drawing.Color.DodgerBlue;
+            this.iconbtnDelete.FlatAppearance.BorderSize = 0;
+            this.iconbtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconbtnDelete.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconbtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconbtnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.iconbtnDelete.IconChar = FontAwesome.Sharp.IconChar.UserMinus;
+            this.iconbtnDelete.IconColor = System.Drawing.Color.Aquamarine;
+            this.iconbtnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconbtnDelete.IconSize = 40;
+            this.iconbtnDelete.Location = new System.Drawing.Point(36, 164);
+            this.iconbtnDelete.Name = "iconbtnDelete";
+            this.iconbtnDelete.Rotation = 0D;
+            this.iconbtnDelete.Size = new System.Drawing.Size(237, 50);
+            this.iconbtnDelete.TabIndex = 2;
+            this.iconbtnDelete.Text = "Xóa nhân viên";
+            this.iconbtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconbtnDelete.UseVisualStyleBackColor = false;
+            this.iconbtnDelete.Click += new System.EventHandler(this.iconbtnDelete_Click);
             // 
             // iconbtnUpdate
             // 
@@ -189,60 +305,28 @@
             this.iconbtnUpdate.UseVisualStyleBackColor = false;
             this.iconbtnUpdate.Click += new System.EventHandler(this.iconbtnUpdate_Click);
             // 
-            // iconbtnDelete
+            // iconbtnAdd
             // 
-            this.iconbtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconbtnDelete.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconbtnDelete.FlatAppearance.BorderSize = 0;
-            this.iconbtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconbtnDelete.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconbtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconbtnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.iconbtnDelete.IconChar = FontAwesome.Sharp.IconChar.UserMinus;
-            this.iconbtnDelete.IconColor = System.Drawing.Color.Aquamarine;
-            this.iconbtnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconbtnDelete.IconSize = 40;
-            this.iconbtnDelete.Location = new System.Drawing.Point(36, 164);
-            this.iconbtnDelete.Name = "iconbtnDelete";
-            this.iconbtnDelete.Rotation = 0D;
-            this.iconbtnDelete.Size = new System.Drawing.Size(237, 50);
-            this.iconbtnDelete.TabIndex = 2;
-            this.iconbtnDelete.Text = "Xóa nhân viên";
-            this.iconbtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconbtnDelete.UseVisualStyleBackColor = false;
-            this.iconbtnDelete.Click += new System.EventHandler(this.iconbtnDelete_Click);
-            // 
-            // iconbtnCreateAccount
-            // 
-            this.iconbtnCreateAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconbtnCreateAccount.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconbtnCreateAccount.FlatAppearance.BorderSize = 0;
-            this.iconbtnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconbtnCreateAccount.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconbtnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconbtnCreateAccount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.iconbtnCreateAccount.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            this.iconbtnCreateAccount.IconColor = System.Drawing.Color.Aquamarine;
-            this.iconbtnCreateAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconbtnCreateAccount.IconSize = 40;
-            this.iconbtnCreateAccount.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconbtnCreateAccount.Location = new System.Drawing.Point(36, 233);
-            this.iconbtnCreateAccount.Name = "iconbtnCreateAccount";
-            this.iconbtnCreateAccount.Rotation = 0D;
-            this.iconbtnCreateAccount.Size = new System.Drawing.Size(237, 50);
-            this.iconbtnCreateAccount.TabIndex = 3;
-            this.iconbtnCreateAccount.Text = "Cấp tài khoản";
-            this.iconbtnCreateAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconbtnCreateAccount.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 328);
-            this.panel3.TabIndex = 4;
+            this.iconbtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconbtnAdd.BackColor = System.Drawing.Color.DodgerBlue;
+            this.iconbtnAdd.FlatAppearance.BorderSize = 0;
+            this.iconbtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconbtnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconbtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconbtnAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.iconbtnAdd.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.iconbtnAdd.IconColor = System.Drawing.Color.Aquamarine;
+            this.iconbtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconbtnAdd.IconSize = 40;
+            this.iconbtnAdd.Location = new System.Drawing.Point(36, 22);
+            this.iconbtnAdd.Name = "iconbtnAdd";
+            this.iconbtnAdd.Rotation = 0D;
+            this.iconbtnAdd.Size = new System.Drawing.Size(237, 50);
+            this.iconbtnAdd.TabIndex = 0;
+            this.iconbtnAdd.Text = "Thêm nhân viên";
+            this.iconbtnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconbtnAdd.UseVisualStyleBackColor = false;
+            this.iconbtnAdd.Click += new System.EventHandler(this.iconbtnAdd_Click);
             // 
             // label1
             // 
@@ -462,87 +546,6 @@
             this.iconButton5.UseVisualStyleBackColor = false;
             this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "MaNV";
-            this.Column1.FillWeight = 50F;
-            this.Column1.HeaderText = "Mã NV";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TenNV";
-            this.Column2.HeaderText = "Tên nhân viên";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "NgaySinh";
-            this.Column3.FillWeight = 70F;
-            this.Column3.HeaderText = "Ngày sinh";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "GT";
-            this.Column4.FillWeight = 50F;
-            this.Column4.HeaderText = "Giới tính";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "CMND";
-            this.Column5.FillWeight = 80F;
-            this.Column5.HeaderText = "CMND";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "sdt";
-            this.Column6.FillWeight = 80F;
-            this.Column6.HeaderText = "Số điện thoại";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "diachi";
-            this.Column7.FillWeight = 170F;
-            this.Column7.HeaderText = "Địa chỉ";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "NgayVaoLam";
-            this.Column8.FillWeight = 80F;
-            this.Column8.HeaderText = "Ngày vào làm";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "Luong";
-            this.Column9.FillWeight = 80F;
-            this.Column9.HeaderText = "Lương";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "ChucVu";
-            this.Column10.HeaderText = "Chức vụ";
-            this.Column10.Name = "Column10";
-            // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,8 +580,8 @@
             this.Text = "UserManagement";
             this.Load += new System.EventHandler(this.UserManagement_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListStaff)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

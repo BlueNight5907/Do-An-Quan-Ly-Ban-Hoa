@@ -539,7 +539,7 @@
             this.tabSellProduct.Padding = new System.Windows.Forms.Padding(3);
             this.tabSellProduct.Size = new System.Drawing.Size(1362, 645);
             this.tabSellProduct.TabIndex = 0;
-            this.tabSellProduct.Text = "Nhập hàng";
+            this.tabSellProduct.Text = "Bán hàng";
             this.tabSellProduct.Click += new System.EventHandler(this.tabSellProduct_Click);
             // 
             // flpListProduct
