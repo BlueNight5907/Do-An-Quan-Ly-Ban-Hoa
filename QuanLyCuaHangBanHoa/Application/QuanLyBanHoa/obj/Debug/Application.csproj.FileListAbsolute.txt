@@ -67,7 +67,6 @@ F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\Quan
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.AddProduct.resources
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Customers.resources
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.ImportGoods.resources
-F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Sell.resources
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.SellProduct.resources
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.Setting.resources
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.MainScreen.resources
@@ -81,3 +80,4 @@ F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\Quan
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.pdb
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.UserManagement.resources
 F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.UserInformation.resources
+F:\Cong Nghe Phan Mem\Do-An-Quan-Ly-Ban-Hoa\QuanLyCuaHangBanHoa\Application\QuanLyBanHoa\obj\Debug\QuanLyBanHoa.Forms.ChangePassword.resources

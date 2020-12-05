@@ -32,8 +32,7 @@ namespace QuanLyBanHoa.DAO
         public void DetailImport(int ID, int IDProduct, int BID,int Amount, int Money)
         {
             string query = "exec NhapHangVaoKho_ChiTiet @a , @b , @c , @d , @e";
-            int data = DataProvider.Instance.ExecuteNonQuery(query, new object[] {ID, IDProduct, BID, Amount, Money });
-            
+            int data = DataProvider.Instance.ExecuteNonQuery(query, new object[] {ID, IDProduct, BID, Amount, Money });  
         }
         public DataTable DetailHistory(DateTime date)
         {

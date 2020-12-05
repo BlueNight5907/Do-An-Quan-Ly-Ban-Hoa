@@ -15,6 +15,12 @@ namespace QuanLyBanHoa.DTO
         private int iD;
         private string name;
         private string permission;
+        private DateTime birthday;
+        private string cmnd;
+        private string sdt;
+        private string address;
+        private DateTime datestartjob;
+        private bool sex;
         public Account(DataRow row)
         {
             this.ID = (int)row["MaNV"];
@@ -23,6 +29,84 @@ namespace QuanLyBanHoa.DTO
             this.DisplayName = (string)row["TenHienThi"];
             this.UserName = (string)row["TenDangNhap"];
             this.Permission = (string)row["permission"];
+            this.BirthDay = (DateTime)row["NgaySinh"];
+            this.CMND = (string)row["CMND"];
+            this.SDT = (string)row["sdt"];
+            this.Address=(string)row["diachi"];
+            this.DateStartJob = (DateTime)row["NgayVaoLam"];
+            this.Sex = (bool)row["GT"];
+        }
+        public bool Sex
+        {
+            get
+            {
+                return sex;
+            }
+
+            set
+            {
+                sex = value;
+            }
+        }
+        public DateTime DateStartJob
+        {
+            get
+            {
+                return datestartjob;
+            }
+
+            set
+            {
+                datestartjob = value;
+            }
+        }
+        public string Address
+        {
+            get
+            {
+                return address;
+            }
+
+            set
+            {
+                address = value;
+            }
+        }
+        public string SDT
+        {
+            get
+            {
+                return sdt;
+            }
+
+            set
+            {
+                sdt = value;
+            }
+        }
+        public string CMND
+        {
+            get
+            {
+                return cmnd;
+            }
+
+            set
+            {
+                cmnd = value;
+            }
+        }
+        public DateTime BirthDay
+        {
+            get
+            {
+                return birthday;
+            }
+
+            set
+            {
+                birthday = value;
+            }
         }
         public int ID
         {

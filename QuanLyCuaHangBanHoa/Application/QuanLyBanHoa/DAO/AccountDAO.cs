@@ -32,5 +32,17 @@ namespace QuanLyBanHoa.DAO
         {
             return account;
         }
+        public bool CheckAccount(string username, string password)
+        {
+            string query = "exec CheckAccount @username , @password";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password });
+            return result.Rows.Count > 0;
+        }
+        public int ChangePassWord(string username, string password)
+        {
+            string query = "Update TaiKhoan set Matkhau = @password where TenDangNhap = @username";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { password,username });
+            return result;
+        }
     }
 }

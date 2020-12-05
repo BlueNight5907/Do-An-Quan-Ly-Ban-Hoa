@@ -14,6 +14,7 @@ namespace QuanLyBanHoa.DTO
         private int iD;
         private string name;
         private Image img = null;
+        private int price = 0;
         private Image ByteArrToImage(byte[] imgArr)
         {
             MemoryStream m = new MemoryStream(imgArr);
@@ -28,12 +29,13 @@ namespace QuanLyBanHoa.DTO
                 this.img = ByteArrToImage((byte[])row["IMG"]);
             }
         }
-        public ProductWithIMG(int ID, string Ten,Image img)
+        public ProductWithIMG(int ID, string Ten,Image img, int price = 0)
         {
 
             this.ID = ID;
             this.Name = Ten;
             this.IMG = img;
+            this.Price = price;
         }
         public int ID
         {
@@ -45,6 +47,18 @@ namespace QuanLyBanHoa.DTO
             set
             {
                 iD = value;
+            }
+        }
+        public int Price
+        {
+            get
+            {
+                return price;
+            }
+
+            set
+            {
+                price = value;
             }
         }
         public string Name
