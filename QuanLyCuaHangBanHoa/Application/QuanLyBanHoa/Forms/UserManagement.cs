@@ -30,7 +30,7 @@ namespace QuanLyBanHoa.Forms
             String manv = Convert.ToString(row.Cells[0].Value);
             String tennv = Convert.ToString(row.Cells[1].Value);
             String ngaysinh = Convert.ToString(row.Cells[2].Value).Trim();
-            String gioitinh = "nu";
+            String gioitinh = "nữ";
             if (Convert.ToString(row.Cells[3].Value).Equals("True"))
             {
                 gioitinh = "nam";

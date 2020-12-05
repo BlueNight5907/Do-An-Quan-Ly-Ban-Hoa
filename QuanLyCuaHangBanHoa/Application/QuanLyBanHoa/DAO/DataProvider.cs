@@ -20,7 +20,7 @@ namespace QuanLyBanHoa.DAO
             private set { DataProvider.instance = value; }
         }
         public DataProvider() { }
-        private String connectionString = @"Data Source=LAPTOP-6LSBL3AV\SQLEXPRESS;Initial Catalog=QuanLyBanHoa;Integrated Security=True";
+        private String connectionString = @"Data Source=localhost;Initial Catalog=QuanLyBanHoa;Integrated Security=True";
         // cac ham query phu hop voi tung dieu kien
 
 
